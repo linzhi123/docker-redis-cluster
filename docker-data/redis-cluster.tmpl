@@ -1,0 +1,21 @@
+#bind 192.168.1.200
+#port ${PORT}
+#cluster-enabled yes
+#cluster-config-file nodes.conf
+#cluster-node-timeout 5000
+cluster-announce-ip 192.168.1.200
+#cluster-announce-port ${PORT}
+#cluster-announce-bus-port 1${PORT}
+#appendonly yes
+#daemonize yes
+#dir /redis-data/${PORT}
+#cluster-require-full-coverage no
+
+
+port ${PORT}
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+dir /redis-data/${PORT}
+cluster-require-full-coverage no
